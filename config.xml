@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configfile>
+	<dataSetParameters>
+		<topic>obama</topic>
+		<relationdata>3232</relationdata>
+		<trainFileDir desc="训练特征文件的目录">data/train</trainFileDir>
+		<trainFileName desc="训练集文件名称">trainfile</trainFileName>
+		<testFileDir desc="测试集文件的目录">data/test</testFileDir>
+		<testFileName desc="测试集文件名称">testfile</testFileName>
+		<classifyStatResultDir desc="存储结果用于结果分析">result/withRelation</classifyStatResultDir>
+		<nonpublicwordFileDir desc="非公共情感词存储目录">configinfo</nonpublicwordFileDir>
+		<nonpublicwordFileName desc="非公共情感词文件名称">obamaprivatewords</nonpublicwordFileName>
+		<tweetsContentFile>../../../twitter/05choosemodel/pmi_pmiwords.txt</tweetsContentFile>
+	</dataSetParameters>
+
+	<featureParameter desc="特征集文件位置为0的特征是属性号，第一个特征就是公共情感词集的第一个词">	
+		<emocValuePosition desc="表情符号非文本特征位置">6962</emocValuePosition>
+		<numNegativeWordsPosition desc="否定词词特征位置">6963</numNegativeWordsPosition>
+		<parentattposition>6969</parentattposition>
+		<childrenattposition>6970</childrenattposition>
+		<topicPosition>6971</topicPosition>
+		<labelPosition desc="数据标志位">6972</labelPosition>
+		<numPublicSentimentWord desc="公共情感词数量">5929</numPublicSentimentWord>
+		<numPrivateSentimentWord desc="非公共情感词数量">1032</numPrivateSentimentWord>
+		<numNontextFeature desc="非文本特征数量">10</numNontextFeature>
+	</featureParameter>
+	
+	<modelParameter>
+		<numPeriod desc="表示的是共有多少个可计算时刻">1</numPeriod>
+		<classifyResultThreshold desc="tweet状态的分类结果，超过该阈值的加入进去">0.5</classifyResultThreshold>
+		<numTopKTestData2TrainSet desc="每次迭代，取前k条tweet状态从测试集转入到训练集">5</numTopKTestData2TrainSet>
+		<maxIteration desc="每一个时刻最大的迭代次数">2</maxIteration>
+		<numTopKPrivateWord desc="每过一个时刻，添加的非公共情感词的个数">20</numTopKPrivateWord>
+	</modelParameter>
+	
+	<visulizationParameter>
+		<numLayer>41</numLayer>
+	</visulizationParameter>
+	
+</Configfile>
