@@ -1,5 +1,6 @@
-AdaptiveCotrainMSVM
+TASC: Topic-Adaptive Sentiment Classification
 ======
+TASC is a multi-label SVM classifier based on **co-training** and **topic-adaption**.
 
 Related works 
 ------
